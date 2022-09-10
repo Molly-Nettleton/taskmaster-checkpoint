@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+    integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+    integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+  </style>
+  <title>taskmaster-checkpoint</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <h1 class="text-center m-4 bg-light rounded">TASK MASTER</h1>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-5">
+          <!-- NOTE navbar start -->
+          <div>
+            <nav class="navbar no-select p-3">
+              <!-- TODO function link to submit form below -->
+              <form onsubmit="app.cardsController.createCard()">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control border border-secondary" maxlength="15" required
+                        minlength="2" id="cardameid" name="cardname" placeholder="Card Name">
+                      <label for="cardname">List Name ...</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md">
+                    <select class="form-select border border-secondary p-3" name="Colors">
+                      <option selected value="Blue">Blue</option>
+                      <option value="Purple">Purple</option>
+                      <option value="Green">Green</option>
+                      <option value="Red">Red</option>
+                      <option value="Orange">Orange</option>
+                    </select>
+                  </div>
+
+
+                  <div class="col-md">
+                    <button type="submit" id="createlistid"
+                      class="btn btn-outline-light bulletin-font h-100 bg-dark">Create
+                      List</button>
+                  </div>
+                </div>
+              </form>
+            </nav>
+          </div>
+          <!-- NOTE navbar end -->
+        </div>
+      </div>
+    </div>
+
+
+    <section class="container">
+      <div class="row d-flex" id="cards">
+
+        <!-- ANCHOR CHORE CARD START -->
+        <!-- <div class="col-12 col-md-4 p-2">
+          <div class="elevation-5 rounded bg-light">
+
+            <div class="bg-dark text-light text-end rounded pb-3">
+              <button onclick="" class="btn">
+                <i class="mdi mdi-cancel text-danger"></i>
+              </button>
+              <h4 class="text-center bulletin-font" id="listname">ListNameHere : </h4>
+              <div class="fs-5 text-center">0/2</div>
+            </div> -->
+
+        <!-- <div class="px-3"> -->
+
+        <!-- NOTE CARD ITEMS START-->
+
+        <!-- <div class="d-flex justify-content-between align-items-baseline">
+                <input class="form-check-input" type="checkbox" value="">
+                <p class="p-2 mb-2 border-bottom border-2 border-info">ItemNameHere 1</p>
+                <i onclick="" class="mdi mdi-close selectable"></i>
+              </div>
+
+
+              <div class="d-flex justify-content-between align-items-baseline">
+                <input class="form-check-input" type="checkbox" value="">
+                <p class="p-2 mb-2 border-bottom border-2 border-info">
+                  ItemNameHere 2</p>
+                <i onclick="" class="mdi mdi-close selectable"></i>
+              </div> -->
+
+        <!-- NOTE CARD ITEMS END-->
+        <!-- 
+              <form onsubmit="" class="py-4">
+                <div class="form-group d-flex justify-content-between">
+                  <input class="chore-input" type="text" name="description" placeholder="Add Chore...">
+                  <button class="btn" type="submit"><i class="mdi mdi-plus"></i></button>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div> -->
+        <!-- ANCHOR CHORE CARD END -->
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-dark text-light">
+    <div class="text-center no-select">
+      <p><small>Made with 💖 by CodeWorks</small></p>
+    </div>
+  </footer>
+
+  <span>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+      integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+    <script src="app/App.js" type="module"></script>
+  </span>
+</body>
+
+</html>
