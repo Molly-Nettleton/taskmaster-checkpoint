@@ -16,7 +16,7 @@ export class ChoresController {
       let formData = getFormData(form)
       formData.cardId = cardId
       console.log('does this cool okay?', formData)
-      choresService.creatChore(formData)
+      choresService.createChore(formData)
     } catch (error) {
       console.log('Create chore error:',error);
     }
@@ -33,6 +33,9 @@ export class ChoresController {
     } catch (error) {
       console.log(error)
     }
+  }
+  toggleChoreComplete(id) {
+    choresService.toggleChoreComplete(id)
   }
   
 }

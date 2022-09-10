@@ -3,13 +3,11 @@ import { generateId } from "../Utils/generateId.js";
 
 
 export class Card {
-  /**
-   * @param {{cardname: string, color: string, id:string}} data 
-   */
   constructor(data) {
     this.id = data.id || generateId()
     this.cardname = data.cardname
     this.color = data.color
+    this.tasktotal = data.tasktotal
 }
 
   
@@ -25,7 +23,7 @@ export class Card {
           </button>
 
               <h4 class="text-center bulletin-font" id="listname">${this.cardname} : </h4>
-              <div class="fs-5 text-center">0/2</div>
+              <div class="fs-5 text-center"> ${this.CompletedChores.length}  / ${this.Chores.length}</div>
             </div>
 
             <div class="px-3" id="chores">
@@ -54,6 +52,12 @@ ${this.ChoresTemplates}
   get Chores() {
     let chores = appState.chores.filter(chore => chore.cardId == this.id)
     return chores
+  }
+
+  get CompletedChores() {
+    let chore = appState.chores.filter(chore => chore.choreComplete == true)
+    let cardChores = chore.filter(chore => chore.cardId == this.id)
+    return cardChores
   }
 
 }
