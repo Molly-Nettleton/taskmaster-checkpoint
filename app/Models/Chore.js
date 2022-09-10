@@ -12,6 +12,8 @@ export class Chore {
     this.cardId = data.cardId
 }
 
+  // ANCHOR
+  // TODO make checkbox remain checked upon reload
   get ChoreTemplate() {
     return/*html*/`
     <div class="d-flex justify-content-between align-items-baseline">

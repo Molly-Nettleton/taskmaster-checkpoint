@@ -15,7 +15,7 @@ class ChoresService {
     let chore = new Chore(newChore)
     console.log('new chore', chore)
     appState.chores = [chore, ...appState.chores]
-    console.log(appState.chores);
+    // console.log(appState.chores);
     saveState('chores', appState.chores)
 }
 

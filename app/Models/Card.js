@@ -18,7 +18,7 @@ export class Card {
         <div class="col-12 col-md-4 p-2">
           <div class="elevation-5 rounded bg-light">
 
-            <div class="bg-dark text-light text-end rounded pb-3">
+            <div class=" text-light text-end rounded pb-3" style="background-color:${this.color}">
 
               <button onclick="app.cardsController.removeCard('${this.id}')" class="btn btn-danger">
           <b><i class="mdi mdi-cancel text-light"></i></b>
@@ -32,10 +32,10 @@ export class Card {
 
 ${this.ChoresTemplates}
 
-              <form onsubmit="app.choresController.createChore('${this.id}')" class="py-4">
+              <form onsubmit="app.choresController.createChore('${this.id}')" class="py-4 mb-3">
                 <div class="form-group d-flex justify-content-between">
                   <input class="chore-input" type="text" name="chorename" maxlength="15" required
-                        minlength="2" placeholder="Add Chore...">
+                        minlength="3" placeholder="Add Chore...">
                   <button class="btn" type="submit" ><i class="mdi mdi-plus"></i></button>
                 </div>
             </div>
