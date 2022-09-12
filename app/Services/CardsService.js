@@ -5,7 +5,7 @@ import { saveState } from "../Utils/Store.js";
 class CardsService {
   createCard(formData) {
     let card = new Card(formData)
-    appState.cards = [card, ...appState.cards]
+    appState.cards = [ ...appState.cards,card]
     console.log(appState.cards)
     saveState('cards', appState.cards)
 }

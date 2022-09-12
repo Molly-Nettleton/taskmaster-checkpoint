@@ -1,5 +1,6 @@
 import { appState } from "../AppState.js";
 import { Chore } from "../Models/Chore.js";
+import { Pop } from "../Utils/Pop.js";
 import { saveState } from "../Utils/Store.js";
 
 
@@ -15,7 +16,7 @@ class ChoresService {
   createChore(newChore) {
     let chore = new Chore(newChore)
     console.log('new chore', chore)
-    appState.chores = [chore, ...appState.chores]
+    appState.chores = [...appState.chores, chore]
     // console.log(appState.chores);
     saveState('chores', appState.chores)
 }

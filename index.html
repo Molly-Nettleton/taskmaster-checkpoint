@@ -27,8 +27,8 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-md-4 col-12"></div>
+        <div class="col-md-4 col-12">
           <h1 class="text-center m-4 bg-light rounded">TASK MASTER</h1>
         </div>
       </div>
@@ -39,14 +39,13 @@
 
     <div class="container">
       <div class="row justify-content-md-center">
-        <div class="col-5">
+        <div class="col-md-5 col-12 ">
           <!-- NOTE navbar start -->
           <div>
-            <nav class="navbar no-select p-3">
-              <!-- TODO function link to submit form below -->
+            <nav class="navbar no-select p-3 ">
               <form onsubmit="app.cardsController.createCard()">
-                <div class="row">
-                  <div class="col-6">
+                <div class="row ">
+                  <div class="col-md-6 col-7">
                     <div class="form-floating">
                       <input type="text" class="form-control border border-secondary" maxlength="15" required
                         minlength="3" id="cardameid" name="cardname" placeholder="Card Name">
@@ -54,7 +53,7 @@
                     </div>
                   </div>
 
-                  <div class="col-2 p-2 ms-2">
+                  <div class="col-md-2 col-12 p-2 ms-2">
                     <input type="color" name="color" class="form-control form-control-color" id="ColorInput"
                       value="#111927" title="Choose your color" />
                   </div>

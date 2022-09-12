@@ -1,6 +1,5 @@
-import { appState } from "../AppState.js";
 import { generateId } from "../Utils/generateId.js";
-import { saveState } from "../Utils/Store.js";
+
 
 export class Chore {
 
@@ -14,8 +13,6 @@ export class Chore {
     this.cardId = data.cardId
 }
 
-  // ANCHOR
-  // TODO make checkbox remain checked upon reload
   get ChoreTemplate() {
     return/*html*/`
     <div class="d-flex justify-content-between align-items-baseline">
